@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="GestionOC.Web.Master" %>
+
+<%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Heredado.css" rel="stylesheet" />
+    <link href="Content/Alertas.css" rel="stylesheet" />
+    <script src="Script/Alerta.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <dx:ASPxPanel ID="ASPxPanelSuperior" runat="server" FixedPosition="WindowTop" Border-BorderWidth="0" Width="100%" BackColor="#E0E0E0">
+            <PanelCollection>
+                <dx:PanelContent>
+                    <div class="pull-left">
+                        <dx:ASPxImage ID="ImgLogo" runat="server" ImageUrl="~/Img/logo.png" BackColor="#E0E0E0" Height="70px"></dx:ASPxImage>
+                    </div>
+
+                    <div class="pull-right">
+                        <dx:ASPxHyperLink ID="IDLINK_IMGUSERICON" ClientInstanceName="IDLINK_IMGUSERICON" runat="server" Text="ASPxHyperLink" ImageUrl="~/Img/User.png" ImageWidth="24px" NavigateUrl="#">
+                            <ClientSideEvents Click="function(s, e) { IDPOPUP_USER.Show(); }" />
+                        </dx:ASPxHyperLink>
+
+                        <dx:ASPxPopupControl ID="IDPOPUP_USER" ClientInstanceName="IDPOPUP_USER" Width="250px" Height="50%"
+                            PopupElementID="IDLINK_IMGUSERICON" runat="server" ShowHeader="False" CloseOnEscape="True" Modal="False" PopupHorizontalAlign="RightSides"
+                            PopupVerticalAlign="Above" PopupHorizontalOffset="-15" PopupVerticalOffset="0" AutoUpdatePosition="True">
+
+                            <ContentStyle CssClass="Pup-Content-atr"></ContentStyle>
+                            <HeaderStyle CssClass="Pup-Header-atr"></HeaderStyle>
+                            <ContentCollection>
+                                <dx:PopupControlContentControl runat="server">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-xs-5 col-sm-5 col-md-5">
+                                                <div style="margin-top: 3px;">
+                                                    <dx:ASPxImage ID="IDIMAGE_USERCLI" CssClass="img-responsive" runat="server" Width="150px" Height="60px"
+                                                        ShowLoadingImage="true" ImageUrl="~/Img/usericon.png">
+                                                    </dx:ASPxImage>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-7 col-sm-7 col-md-7 ">
+                                                <div class="centered" style="margin-top: 1%">
+                                                    <dx:ASPxLabel ID="IDLblUsrLog" CssClass="Lbl-SubTitulo-White Lbl-Tamaño-S" runat="server" Text=""></dx:ASPxLabel>
+                                                    <br style="margin-top: 1%" />
+
+                                                    <div style="margin-top: 4px;">
+                                                        <dx:ASPxButton ID="IDBtnCerraSesion" runat="server" Text="Cerrar Sesión" BackColor="Transparent" ForeColor="#18264F" RenderMode="Link" OnClick="IDBtnCerraSesion_Click">
+                                                            <HoverStyle BackColor="Transparent" ForeColor="#455668"></HoverStyle>
+                                                        </dx:ASPxButton>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dx:PopupControlContentControl>
+                            </ContentCollection>
+                            <Border BorderColor="#787878" BorderWidth="1px" />
+                        </dx:ASPxPopupControl>
+
+                        <dx:ASPxLabel CssClass="Lbl-Version" ID="ASPxLabel4" runat="server" Text="Usuario :"></dx:ASPxLabel>
+                        <dx:ASPxLabel CssClass="Lbl-Version" ID="IDLblUserRegistrado" runat="server" Text=""></dx:ASPxLabel>
+                        <dx:ASPxLabel CssClass="Lbl-Version" ID="ASPxLabel6" runat="server" Text="|"></dx:ASPxLabel>
+                        <dx:ASPxLabel CssClass="Lbl-Version" ID="ASPxLabel3" runat="server" Text="Versión :"></dx:ASPxLabel>
+                        <dx:ASPxLabel CssClass="Lbl-Version" ID="ASPxLabel1" runat="server" Text="1.19.165.1"></dx:ASPxLabel>
+                    </div>
+
+                    <div class="centered">
+                        <dx:ASPxLabel ID="IDLblTituloProyecto" runat="server" Text="ORDEN DE COMPRA" CssClass="Lbl-TituloXL"></dx:ASPxLabel>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 ">
+                            <div>
+                                <dx:ASPxMenu ID="IDMnuMenuMaster" runat="server" ClientInstanceName="IDMnuMenuMaster" CssClass="centered" ItemSpacing="0px" ItemWrap="False">
+                                    <Border BorderStyle="Solid" BorderWidth="1px" />
+                                    <Paddings Padding="0px" PaddingTop="0px" />
+                                    <SeparatorPaddings Padding="0px" />
+
+                                    <Items>
+                                        <dx:MenuItem Text="Gestión OC" NavigateUrl="GestionOrdenCompra.aspx"></dx:MenuItem>
+                                        <dx:MenuItem Text="Informe" NavigateUrl="Informe.aspx"></dx:MenuItem>
+                                        <dx:MenuItem Text="Parámetros" NavigateUrl="#">
+                                            <Items>
+                                                <dx:MenuItem Text="Moneda" NavigateUrl="Parametro.Moneda.aspx"></dx:MenuItem>
+                                                <dx:MenuItem Text="Impuesto" NavigateUrl="Parametro.Impuesto.aspx"></dx:MenuItem>
+                                            </Items>
+                                        </dx:MenuItem>
+                                    </Items>
+
+                                    <ItemStyle CssClass="Letra03-tipo font-size-18" ForeColor="#000000" BackColor="#E0E0E0">
+                                        <SelectedStyle CssClass="color-bg11" ForeColor="#FFFFFF"></SelectedStyle>
+                                        <HoverStyle CssClass="color-bg05" ForeColor="#000000"></HoverStyle>
+                                        <Paddings PaddingTop="8px" PaddingBottom="11px" PaddingRight="20px" PaddingLeft="20px" />
+                                    </ItemStyle>
+
+                                    <SubMenuStyle CssClass="color-bg03" ItemSpacing="0" GutterWidth="0" SeparatorWidth="0" ForeColor="#FFFFFF">
+                                        <Paddings Padding="0"></Paddings>
+                                        <SeparatorPaddings Padding="0"></SeparatorPaddings>
+                                    </SubMenuStyle>
+
+                                    <SubMenuItemStyle CssClass="Letra03-tipo font-size-18 color-tip01" Width="100%">
+                                        <SelectedStyle CssClass="color-bg05" ForeColor="#000000"></SelectedStyle>
+                                        <HoverStyle CssClass="color-bg02 color-tip07" Border-BorderColor="Transparent"></HoverStyle>
+                                        <Paddings PaddingRight="35px" PaddingTop="5px" PaddingBottom="5px"></Paddings>
+                                    </SubMenuItemStyle>
+
+                                    <DisabledStyle CssClass="SubMenu-color-item-Disable" ForeColor="#FFFFFF"></DisabledStyle>
+                                </dx:ASPxMenu>
+                            </div>
+                        </div>
+                    </div>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+        <dx:ASPxPanel ID="ASPxPanelIzquierdo" runat="server" FixedPosition="WindowLeft" Border-BorderWidth="0" Width="10%">
+            <PanelCollection>
+                <dx:PanelContent runat="server">
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+        <dx:ASPxPanel ID="ASPxPanelPrincipal" runat="server">
+            <PanelCollection>
+                <dx:PanelContent runat="server">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+        <dx:ASPxPanel ID="ASPxPanelDerecho" runat="server" FixedPosition="WindowRight" Border-BorderWidth="0" Width="10%">
+            <PanelCollection>
+                <dx:PanelContent runat="server">
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+        <dx:ASPxPanel ID="ASPxPanelInferiror" runat="server" FixedPosition="WindowBottom" Border-BorderWidth="0" Width="100%">
+            <PanelCollection>
+                <dx:PanelContent runat="server">
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+    </form>
+</body>
+</html>

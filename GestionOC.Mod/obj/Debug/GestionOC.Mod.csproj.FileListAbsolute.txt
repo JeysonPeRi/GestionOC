@@ -1,0 +1,17 @@
+C:\Users\jeyson\source\repos\GestionOC\GestionOC.Mod\bin\Debug\GestionOC.Mod.dll
+C:\Users\jeyson\source\repos\GestionOC\GestionOC.Mod\bin\Debug\GestionOC.Mod.pdb
+C:\Users\jeyson\source\repos\GestionOC\GestionOC.Mod\obj\Debug\GestionOC.Mod.csproj.CoreCompileInputs.cache
+C:\Users\jeyson\source\repos\GestionOC\GestionOC.Mod\obj\Debug\GestionOC.Mod.dll
+C:\Users\jeyson\source\repos\GestionOC\GestionOC.Mod\obj\Debug\GestionOC.Mod.pdb
+C:\Users\jpena\Desktop\GestionOrdenDeCompra\GestionOC\GestionOC.Mod\bin\Debug\GestionOC.Mod.dll
+C:\Users\jpena\Desktop\GestionOrdenDeCompra\GestionOC\GestionOC.Mod\bin\Debug\GestionOC.Mod.pdb
+C:\Users\jpena\Desktop\GestionOrdenDeCompra\GestionOC\GestionOC.Mod\obj\Debug\GestionOC.Mod.csproj.CoreCompileInputs.cache
+C:\Users\jpena\Desktop\GestionOrdenDeCompra\GestionOC\GestionOC.Mod\obj\Debug\GestionOC.Mod.dll
+C:\Users\jpena\Desktop\GestionOrdenDeCompra\GestionOC\GestionOC.Mod\obj\Debug\GestionOC.Mod.pdb
+C:\Users\jpena\Desktop\GestionOrdenDeCompra\GestionOC\GestionOC.Mod\obj\Debug\GestionOC.Mod.csproj.AssemblyReference.cache
+C:\Users\jpena\source\repos\GestionOC\GestionOC.Mod\bin\Debug\GestionOC.Mod.dll
+C:\Users\jpena\source\repos\GestionOC\GestionOC.Mod\bin\Debug\GestionOC.Mod.pdb
+C:\Users\jpena\source\repos\GestionOC\GestionOC.Mod\obj\Debug\GestionOC.Mod.csproj.AssemblyReference.cache
+C:\Users\jpena\source\repos\GestionOC\GestionOC.Mod\obj\Debug\GestionOC.Mod.csproj.CoreCompileInputs.cache
+C:\Users\jpena\source\repos\GestionOC\GestionOC.Mod\obj\Debug\GestionOC.Mod.dll
+C:\Users\jpena\source\repos\GestionOC\GestionOC.Mod\obj\Debug\GestionOC.Mod.pdb
